@@ -68,20 +68,6 @@ public class MainPanel extends JPanel implements KeyListener {
 		}
 
 		// shift detection
-		for (Ball fetch : paintingBallList) {
-			if (fetch.getColor() == Color.GREEN) {
-				for (Ball current : paintingBallList) {
-                    int negativeX = current.getX() - fetch.getX() < 0 ? -1 : 1;
-                    int negativeY = current.getY() - fetch.getY() < 0 ? -1 : 1;
-					if (current.getColor() == Color.RED && current.distance(fetch) < 100) {
-						current.shift(negativeX * 50, negativeY * 50);
-					} else if (current.getColor() == Color.BLUE && current.distance(fetch) < 120) {
-						current.shift(negativeX * 30, negativeY * 30);
-					}
-				}
-				break;
-			}
-		}
 		for (SubjectBall subject : subjectBallList) {
 			for (Ball observer : observerBallList) {
 				int negativeX = observer.getX() - subject.getX() < 0 ? -1 : 1;
