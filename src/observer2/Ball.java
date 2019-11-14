@@ -2,7 +2,7 @@ package observer2;
 
 import java.awt.*;
 
-public class Ball {
+public abstract class Ball {
     private Color color;
     private int x, y;
     private int xSpeed, ySpeed;
@@ -106,5 +106,6 @@ public class Ball {
 
         return (diffX * diffX) + (diffY * diffY) < dis * dis;
     }
-}
 
+    abstract public void change(char key);
+}

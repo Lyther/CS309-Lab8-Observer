@@ -17,9 +17,9 @@ public class MainPanel extends JPanel implements KeyListener {
 
 
     public MainPanel() {
-        redBall = new Ball(Color.RED, 3, 10, 50);
-        greenBall = new Ball(Color.GREEN, 5, 7, 100);
-        blueBall = new Ball(Color.BLUE, 8, 10, 80);
+        redBall = new RedBall(Color.RED, 3, 10, 50);
+        greenBall = new GreenBall(Color.GREEN, 5, 7, 100);
+        blueBall = new BlueBall(Color.BLUE, 8, 10, 80);
         paintingBallList.add(redBall);
         paintingBallList.add(greenBall);
         paintingBallList.add(blueBall);
@@ -46,9 +46,8 @@ public class MainPanel extends JPanel implements KeyListener {
             if (paintingBallList.get(i).isVisible()) {
                 for (int j = i + 1; j < paintingBallList.size(); j++) {
                     Ball ball = paintingBallList.get(j);
-                    if (ball.isVisible() && paintingBallList.get(i).isIntersect(ball)) {
-                        ball.setVisible(false);
-                    }
+                    if (ball.isVisible() && paintingBallList.get(i).isIntersect(ball))
+                        ball.setVisible(false); // collision occurs
                 }
             }
         }
@@ -88,33 +87,12 @@ public class MainPanel extends JPanel implements KeyListener {
     public void keyPressed(KeyEvent keyEvent) {
         char keyChar = keyEvent.getKeyChar();
 
-        if (keyChar == ' ') {
+        if (keyChar == ' ')
             start = !start;
-        }
 
-        if (keyChar == 'a' || keyChar == 'd') {
-            int temp = redBall.getXSpeed();
-            redBall.setXSpeed(redBall.getYSpeed());
-            redBall.setYSpeed(temp);
-        }
-
-        switch (keyChar) {
-            case 'a':
-                greenBall.setXSpeed(Math.abs(greenBall.getXSpeed()) * -1);
-                break;
-            case 'd':
-                greenBall.setXSpeed(Math.abs(greenBall.getXSpeed()));
-                break;
-            case 'w':
-                greenBall.setYSpeed(Math.abs(greenBall.getYSpeed()) * -1);
-                break;
-            case 's':
-                greenBall.setYSpeed(Math.abs(greenBall.getYSpeed()));
-                break;
-        }
-
-        blueBall.setXSpeed(-1 * blueBall.getXSpeed());
-        blueBall.setYSpeed(-1 * blueBall.getYSpeed());
+        redBall.change(keyChar);
+        greenBall.change(keyChar);
+        blueBall.change(keyChar);
     }
 
     @Override
