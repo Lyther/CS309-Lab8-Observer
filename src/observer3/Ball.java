@@ -127,5 +127,5 @@ public abstract class Ball {
 		this.setY(newY);
 	}
 
-	abstract public void change(char key);
+	abstract public void notify(char key);
 }

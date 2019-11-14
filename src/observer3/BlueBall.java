@@ -8,7 +8,7 @@ public class BlueBall extends Ball {
 	}
 
 	@Override
-	public void change(char key) {
+	public void notify(char key) {
 		switch (key) {
 			case 'a':
 				this.setXSpeed(Math.abs(this.getXSpeed()) * -1);

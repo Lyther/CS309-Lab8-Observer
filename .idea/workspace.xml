@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38836f3c-37e1-4c9d-9f51-b255d1a7f762" name="Default Changelist" comment="" />
+    <list default="true" id="38836f3c-37e1-4c9d-9f51-b255d1a7f762" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/observer3/SubjectBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer1/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer1/MainPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer2/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer2/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer2/BlueBall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer2/BlueBall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer2/GreenBall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer2/GreenBall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer2/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer2/MainPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer2/RedBall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer2/RedBall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer3/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer3/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer3/BlueBall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer3/BlueBall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer3/GreenBall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer3/GreenBall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer3/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer3/MainPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Observer/observer3/RedBall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Observer/observer3/RedBall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer2/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer2/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer2/BlueBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer2/BlueBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer2/GreenBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer2/GreenBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer2/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer2/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer2/RedBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer2/RedBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer3/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer3/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer3/BlueBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer3/BlueBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer3/GreenBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer3/GreenBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer3/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer3/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observer3/RedBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observer3/RedBall.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +47,9 @@
     <option name="defaultAccountId" value="a04a79d8-6e48-424e-8851-03de1d5b71a1" />
   </component>
   <component name="ProjectId" id="1TYMvYU6I3mPLUqAxSGsl3C64ng" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -114,7 +140,8 @@
       <option name="presentableId" value="Default" />
       <updated>1573632806223</updated>
       <workItem from="1573632808914" duration="1522000" />
-      <workItem from="1573653647085" duration="10061000" />
+      <workItem from="1573653647085" duration="11051000" />
+      <workItem from="1573713244017" duration="1410000" />
     </task>
     <servers />
   </component>
@@ -126,7 +153,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -7,7 +7,7 @@ public class RedBall extends Ball {
 		super(color, xSpeed, ySpeed, ballSize);
 	}
 
-	public void change(char key) {
+	public void notify(char key) {
 		if (key == 'a' || key == 'd') {
 			int temp = this.getXSpeed();
 			this.setXSpeed(this.getYSpeed());

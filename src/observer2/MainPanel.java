@@ -9,6 +9,7 @@ import javax.swing.*;
 public class MainPanel extends JPanel implements KeyListener {
 
     private List<Ball> paintingBallList = new ArrayList<>();
+    private List<Ball> observerBallList = new ArrayList<>();
     private boolean start = false;
     private int score = 0;
     private Ball redBall;
@@ -20,9 +21,14 @@ public class MainPanel extends JPanel implements KeyListener {
         redBall = new RedBall(Color.RED, 3, 10, 50);
         greenBall = new GreenBall(Color.GREEN, 5, 7, 100);
         blueBall = new BlueBall(Color.BLUE, 8, 10, 80);
+
         paintingBallList.add(redBall);
         paintingBallList.add(greenBall);
         paintingBallList.add(blueBall);
+
+        observerBallList.add(redBall);
+        observerBallList.add(greenBall);
+        observerBallList.add(blueBall);
 
         addKeyListener(this);
         setFocusable(true);
@@ -37,7 +43,7 @@ public class MainPanel extends JPanel implements KeyListener {
     }
 
     public void moveBalls() {
-        for (Ball b : paintingBallList) {
+        for (Ball b : observerBallList) {
             b.move();
         }
 
@@ -90,9 +96,8 @@ public class MainPanel extends JPanel implements KeyListener {
         if (keyChar == ' ')
             start = !start;
 
-        redBall.change(keyChar);
-        greenBall.change(keyChar);
-        blueBall.change(keyChar);
+        for (Ball ball : observerBallList)
+            ball.notify(keyChar);
     }
 
     @Override

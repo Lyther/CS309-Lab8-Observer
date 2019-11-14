@@ -107,5 +107,5 @@ public abstract class Ball {
         return (diffX * diffX) + (diffY * diffY) < dis * dis;
     }
 
-    abstract public void change(char key);
+    abstract public void notify(char key);
 }

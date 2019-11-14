@@ -8,7 +8,7 @@ public class GreenBall extends Ball {
 	}
 
 	@Override
-	public void change(char key) {
+	public void notify(char key) {
 		this.setXSpeed(-1 * this.getXSpeed());
 		this.setYSpeed(-1 * this.getYSpeed());
 	}

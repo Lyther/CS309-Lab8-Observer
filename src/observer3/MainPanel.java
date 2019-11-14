@@ -10,10 +10,12 @@ import java.util.List;
 public class MainPanel extends JPanel implements KeyListener {
 
 	private List<Ball> paintingBallList = new ArrayList<>();
+	private List<Ball> observerBallList = new ArrayList<>();
+	private List<SubjectBall> subjectBallList = new ArrayList<>();
 	private boolean start = false;
 	private int score = 0;
 	private Ball redBall;
-	private Ball greenBall;
+	private SubjectBall greenBall;
 	private Ball blueBall;
 
 
@@ -21,9 +23,14 @@ public class MainPanel extends JPanel implements KeyListener {
 		redBall = new RedBall(Color.RED, 3, 10, 50);
 		greenBall = new GreenBall(Color.GREEN, 5, 7, 100);
 		blueBall = new BlueBall(Color.BLUE, 8, 10, 80);
+
 		paintingBallList.add(greenBall);
 		paintingBallList.add(redBall);
 		paintingBallList.add(blueBall);
+
+		observerBallList.add(redBall);
+		observerBallList.add(blueBall);
+		subjectBallList.add(greenBall);
 
 		addKeyListener(this);
 		setFocusable(true);
@@ -75,6 +82,17 @@ public class MainPanel extends JPanel implements KeyListener {
 				break;
 			}
 		}
+		for (SubjectBall subject : subjectBallList) {
+			for (Ball observer : observerBallList) {
+				int negativeX = observer.getX() - subject.getX() < 0 ? -1 : 1;
+				int negativeY = observer.getY() - subject.getY() < 0 ? -1 : 1;
+				if (observer.getColor() == Color.RED && subject.panic(observer, 100)) {
+					observer.shift(negativeX * 50, negativeY * 50);
+				} else if (observer.getColor() == Color.BLUE && subject.panic(observer, 120)) {
+					observer.shift(negativeX * 30, negativeY * 30);
+				}
+			}
+		}
 
 		repaint();
 	}
@@ -123,9 +141,10 @@ public class MainPanel extends JPanel implements KeyListener {
 		if (keyChar == ' ')
 			start = !start;
 
-		redBall.change(keyChar);
-		greenBall.change(keyChar);
-		blueBall.change(keyChar);
+		for (Ball ball : observerBallList)
+			ball.notify(keyChar);
+		for (Ball ball : subjectBallList)
+			ball.notify(keyChar);
 	}
 
 	@Override
