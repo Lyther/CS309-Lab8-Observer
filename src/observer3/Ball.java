@@ -115,11 +115,16 @@ public abstract class Ball {
 	}
 
 	public void shift(int diffX, int diffY) {
-		int X = this.getX();
-		int Y = this.getY();
-		this.setX(X + diffX);
-		this.setY(Y + diffY);
-		this.valid(X, Y);
+		int newX = this.getX() + diffX;
+		int newY = this.getY() + diffY;
+
+		newX = Math.max(0, newX);
+		newX = Math.min(600 - this.getBallSize(), newX);
+		newY = Math.max(0, newY);
+		newY = Math.min(600 - this.getBallSize(), newY);
+
+		this.setX(newX);
+		this.setY(newY);
 	}
 
 	abstract public void change(char key);

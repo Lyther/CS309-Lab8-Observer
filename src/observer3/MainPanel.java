@@ -91,7 +91,13 @@ public class MainPanel extends JPanel implements KeyListener {
 			}
 		}
 
-		if (visibleNum <= 1) {
+		if (!start && visibleNum > 1) {
+		    g.setFont(new Font("Arial", Font.PLAIN, 48));
+		    g.setColor(Color.GRAY);
+		    g.drawString("Press Space to Play", 80, 100);
+        }
+
+		if (start && visibleNum <= 1) {
 		    for (Ball ball : paintingBallList)
 		        ball.setVisible(false);
 			g.setFont(new Font("Arial", Font.PLAIN, 75));

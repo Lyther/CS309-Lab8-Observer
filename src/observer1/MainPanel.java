@@ -67,7 +67,7 @@ public class MainPanel extends JPanel implements KeyListener {
             }
         }
 
-        if (visibleNum <= 1) {
+        if (start && visibleNum <= 1) {
             g.setFont(new Font("Arial", Font.PLAIN, 75));
             for (int i = 70; i < 600; i += 100) {
                 g.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
